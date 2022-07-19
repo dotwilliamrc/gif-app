@@ -13,4 +13,9 @@ export class SidebarComponent {
   public get historial (): string[] {
     return this.gifService.historial
   }
+
+  public buscarGifs (e: MouseEvent, value: string): void {
+    e.preventDefault()
+    this.gifService.buscarGifs(value)
+  }
 }

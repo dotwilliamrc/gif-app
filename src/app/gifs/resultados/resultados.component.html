@@ -1,1 +1,22 @@
-Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+<div class="row">
+  <div
+    *ngFor="let gif of result"
+    class="col-md-4 col-sm-6 animate__animated animate__fadeInDown animate__faster"
+  >
+    <div class="card">
+      <picture>
+        <source [srcset]="gif.images.downsized_medium.url" />
+        <img 
+          class="card-img-top"
+          src="" 
+          alt="{{gif.title}}" 
+        />
+      </picture>
+      <div class="card-body">
+        <p class="card-text">
+          {{gif.title}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
